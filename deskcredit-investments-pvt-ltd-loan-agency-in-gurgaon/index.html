@@ -9,112 +9,119 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
             background-color: #f4f4f4;
         }
-        .banner {
-            background-color: #ffcc00;
-            text-align: center;
+        header {
+            background: #007bff;
+            color: white;
             padding: 10px 0;
-            font-weight: bold;
+            text-align: center;
+        }
+        .banner {
+            background: #ffcc00;
+            padding: 5px;
+            font-size: 14px;
+            text-align: center;
         }
         .hero {
-            background-color: #007bff;
+            background: #0056b3;
             color: white;
             padding: 50px 20px;
             text-align: center;
         }
         .hero h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 36px;
         }
         .button {
-            background-color: #ff5722;
+            background: #28a745;
             color: white;
-            padding: 15px 30px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
-            font-size: 1.2em;
+            font-size: 18px;
         }
         .services, .why-choose-us, .contact {
-            padding: 40px 20px;
+            padding: 20px;
             text-align: center;
-            background-color: white;
-            margin: 20px 0;
+            background: white;
+            margin: 20px;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .service-item {
-            display: inline-block;
+            margin: 10px 0;
+        }
+        .booking-form {
             margin: 20px;
             padding: 20px;
-            background-color: #e1f5fe;
+            background: #e9ecef;
             border-radius: 10px;
-            width: 200px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        input {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 300px;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #007bff;
+            background: #007bff;
             color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .thank-you {
+            display: none;
+            color: green;
+            font-size: 18px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
+<header>
     <div class="banner">Demo concept prepared by Harshit Ahluwalia</div>
+</header>
 
-    <div class="hero">
-        <h1>Welcome to DeskCredit Investments Pvt. Ltd.</h1>
-        <a href="#booking" class="button">Book Appointment</a>
-    </div>
+<section class="hero">
+    <h1>DeskCredit Investments Pvt. Ltd.</h1>
+    <p>Your Trusted Loan Agency in Gurgaon</p>
+    <button class="button" onclick="document.getElementById('booking-form').scrollIntoView();">Book Appointment</button>
+</section>
 
-    <div class="services">
-        <h2>Our Services</h2>
-        <div class="service-item">Personal Loans</div>
-        <div class="service-item">Business Loans</div>
-        <div class="service-item">Home Loans</div>
-        <div class="service-item">Loan Consultation</div>
-    </div>
+<section class="services">
+    <h2>Our Services</h2>
+    <div class="service-item">🏡 Home Loans</div>
+    <div class="service-item">🚗 Car Loans</div>
+    <div class="service-item">💳 Personal Loans</div>
+    <div class="service-item">📈 Business Loans</div>
+</section>
 
-    <div class="why-choose-us">
-        <h2>Why Choose Us?</h2>
-        <p>Google Rating: 4.9 from 80 reviews</p>
-    </div>
+<section class="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <p>We have a Google rating of 4.9 from 80 reviews!</p>
+</section>
 
-    <div class="booking" id="booking">
-        <h2>Book an Appointment</h2>
-        <form onsubmit="alert('Thank you for your appointment!'); return false;">
-            <input type="text" placeholder="Name" required>
-            <input type="tel" placeholder="Phone" required>
-            <input type="date" required>
-            <input type="time" required>
-            <button type="submit" class="button">Submit</button>
-        </form>
-    </div>
+<section class="booking-form" id="booking-form">
+    <h2>Online Booking Form</h2>
+    <form onsubmit="event.preventDefault(); document.getElementById('thank-you-message').style.display='block';">
+        <input type="text" placeholder="Name" required><br><br>
+        <input type="tel" placeholder="Phone" required><br><br>
+        <input type="date" required><br><br>
+        <input type="time" required><br><br>
+        <button type="submit" class="button">Submit</button>
+    </form>
+    <div class="thank-you" id="thank-you-message">Thank you for your appointment request!</div>
+</section>
 
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <p>Phone: #ERROR! (Formula parse error.)</p>
-        <p>Address: Plot no -42, Sector 18, Gurugram, Sarhol, Haryana 122015, India</p>
-    </div>
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: #ERROR!</p>
+    <p>📍 Address: Plot no -42, Sector 18, Gurugram, Sarhol, Haryana 122015, India</p>
+</section>
 
-    <footer>
-        <p>&copy; 2023 DeskCredit Investments Pvt. Ltd. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2023 DeskCredit Investments Pvt. Ltd.</p>
+</footer>
 
 </body>
 </html>

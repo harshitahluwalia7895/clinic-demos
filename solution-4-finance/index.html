@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 4 Finance</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
+        header { background: #4CAF50; color: white; padding: 10px; text-align: center; }
+        .banner { background: #FFC107; padding: 5px; text-align: center; font-weight: bold; }
+        .hero { background: #4CAF50; color: white; padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5em; }
+        .button { background: #FFC107; color: #333; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em; }
+        .services, .why-choose-us, .contact { padding: 40px 20px; text-align: center; }
+        .service { background: #f4f4f4; margin: 20px 0; padding: 20px; border-radius: 5px; }
+        .form-container { margin: 20px auto; max-width: 400px; }
+        input[type="text"], input[type="tel"], input[type="date"], input[type="time"] { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        .footer { background: #333; color: white; padding: 10px; text-align: center; }
+        .thank-you { display: none; color: green; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="banner">Demo concept prepared by Harshit Ahluwalia</div>
+</header>
+
+<section class="hero">
+    <h1>Welcome to Solution 4 Finance</h1>
+    <button class="button" onclick="document.getElementById('booking-form').scrollIntoView();">Book Appointment</button>
+</section>
+
+<section class="services">
+    <h2>Our Services</h2>
+    <div class="service">Personal Loans</div>
+    <div class="service">Business Loans</div>
+    <div class="service">Home Loans</div>
+    <div class="service">Loan Consultation</div>
+</section>
+
+<section class="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <p>Rated <strong>4.9</strong> on Google from <strong>174 reviews</strong></p>
+</section>
+
+<section class="form-container">
+    <h2>Online Booking Form</h2>
+    <form id="booking-form" onsubmit="event.preventDefault(); document.getElementById('thank-you-message').style.display = 'block'; this.reset();">
+        <input type="text" placeholder="Name" required>
+        <input type="tel" placeholder="Phone" required>
+        <input type="date" required>
+        <input type="time" required>
+        <button type="submit" class="button">Submit</button>
+    </form>
+    <div id="thank-you-message" class="thank-you">Thank you for booking an appointment!</div>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: #ERROR! (Formula parse error.)</p>
+    <p>Address: 3rd floor, Satyam Plaza, Jharsa Rd, Civil Lines, Gurugram, Haryana 122001, India</p>
+</section>
+
+<footer class="footer">
+    &copy; 2023 Solution 4 Finance. All rights reserved.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annapurna Finance Private Limited Gurugram</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f4f4f4; }
+        header { background: #4CAF50; color: white; padding: 10px 0; text-align: center; }
+        .banner { background: #ffcc00; padding: 10px; font-size: 14px; }
+        .hero { text-align: center; padding: 50px 20px; background: #4CAF50; color: white; }
+        .hero h1 { font-size: 36px; }
+        .btn { background: #ff5722; color: white; padding: 10px 20px; border: none; cursor: pointer; font-size: 16px; }
+        .services, .why-choose-us, .contact { padding: 30px 20px; background: white; margin: 20px; border-radius: 8px; }
+        .services h2, .why-choose-us h2, .contact h2 { font-size: 28px; }
+        .service-item { margin: 10px 0; }
+        .booking-form { display: flex; flex-direction: column; max-width: 400px; margin: auto; }
+        .booking-form input { margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        footer { text-align: center; padding: 20px; background: #333; color: white; }
+        .thank-you { display: none; text-align: center; color: green; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="banner">Demo concept prepared by Harshit Ahluwalia</div>
+</header>
+
+<section class="hero">
+    <h1>Welcome to Annapurna Finance</h1>
+    <button class="btn" onclick="document.getElementById('booking-form').scrollIntoView();">Book Appointment</button>
+</section>
+
+<section class="services">
+    <h2>Our Services</h2>
+    <div class="service-item">💼 Personal Loans</div>
+    <div class="service-item">🏠 Home Loans</div>
+    <div class="service-item">📈 Investment Advice</div>
+    <div class="service-item">💳 Credit Card Services</div>
+</section>
+
+<section class="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <p>We are rated <strong>4.8</strong> on Google from 8 reviews! Our clients trust us for our commitment to their financial success.</p>
+</section>
+
+<section class="booking">
+    <h2>Online Booking</h2>
+    <form id="booking-form" class="booking-form" onsubmit="event.preventDefault(); document.getElementById('thank-you').style.display='block';">
+        <input type="text" placeholder="Your Name" required>
+        <input type="tel" placeholder="Your Phone" required>
+        <input type="date" required>
+        <input type="time" required>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+    <div id="thank-you" class="thank-you">Thank you for your appointment! We will contact you soon.</div>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: [Your Phone Number]</p>
+    <p>🏢 Address: 2nd Floor, Maruti Industrial Complex, Plot No - 29, Dynamic House, Sub. Major Laxmi Chand Rd, Sector 18, Gurugram, Haryana 122015, India</p>
+</section>
+
+<footer>
+    <p>&copy; 2023 Annapurna Finance Private Limited Gurugram. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

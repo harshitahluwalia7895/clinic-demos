@@ -5,73 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Annapurna Finance Private Limited Gurugram</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #4CAF50;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        .banner {
-            background: #f9c74f;
-            padding: 5px;
-            text-align: center;
-            font-weight: bold;
-        }
-        .hero {
-            background-color: #2196F3;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            margin: 0 0 20px;
-        }
-        .button {
-            background-color: #ff5722;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .services, .why-choose-us, .contact {
-            padding: 20px;
-            text-align: center;
-        }
-        .service-item {
-            background: #e3f2fd;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 5px;
-            display: inline-block;
-            width: calc(33% - 40px);
-        }
-        form {
-            margin: 20px auto;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-        }
-        input, button {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        footer {
-            background: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #4CAF50; color: white; text-align: center; padding: 10px 0; }
+        .banner { background-color: #f39c12; color: white; padding: 5px; text-align: center; }
+        .hero { background-color: #3498db; color: white; padding: 50px 20px; text-align: center; }
+        .hero h1 { margin: 0; font-size: 2.5em; }
+        .btn { background-color: #e67e22; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        .services, .why-choose-us, .contact { padding: 20px; text-align: center; }
+        .service { display: inline-block; width: 30%; margin: 10px; background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        form { display: inline-block; margin: 20px 0; }
+        input, select { padding: 10px; margin: 5px; width: 200px; }
+        footer { text-align: center; padding: 10px; background-color: #4CAF50; color: white; }
     </style>
 </head>
 <body>
@@ -79,37 +23,54 @@
         <div class="banner">Demo concept prepared by Harshit Ahluwalia</div>
     </header>
     <section class="hero">
-        <h1>Welcome to Annapurna Finance Private Limited</h1>
-        <p>Your trusted financial partner in Gurugram</p>
-        <a href="#booking" class="button">Book Appointment</a>
+        <h1>Welcome to Annapurna Finance</h1>
+        <p>Your trusted financial partner</p>
+        <button class="btn" onclick="document.getElementById('booking-form').scrollIntoView();">Book Appointment</button>
     </section>
     <section class="services">
         <h2>Our Services</h2>
-        <div class="service-item">Personal Loans</div>
-        <div class="service-item">Business Loans</div>
-        <div class="service-item">Investment Advisory</div>
+        <div class="service">
+            <h3>Personal Loans</h3>
+            <p>Flexible personal loan options tailored for your needs.</p>
+        </div>
+        <div class="service">
+            <h3>Business Loans</h3>
+            <p>Empowering your business with our financing solutions.</p>
+        </div>
+        <div class="service">
+            <h3>Investment Advisory</h3>
+            <p>Expert advice to help you grow your wealth.</p>
+        </div>
     </section>
     <section class="why-choose-us">
         <h2>Why Choose Us?</h2>
-        <p>We have a Google rating of 4.8 from 8 reviews, ensuring quality service!</p>
+        <p>We have a Google rating of 4.8 from 8 reviews.</p>
     </section>
-    <section id="booking">
-        <h2>Book an Appointment</h2>
-        <form onsubmit="alert('Thank you for booking!'); return false;">
+    <section class="booking" id="booking-form">
+        <h2>Book Your Appointment</h2>
+        <form onsubmit="alert('Thank you for your appointment!'); return false;">
             <input type="text" placeholder="Your Name" required>
             <input type="tel" placeholder="Your Phone" required>
             <input type="date" required>
-            <input type="time" required>
-            <button type="submit">Submit</button>
+            <select required>
+                <option value="">Select Time</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="01:00">01:00 PM</option>
+                <option value="02:00">02:00 PM</option>
+                <option value="03:00">03:00 PM</option>
+            </select>
+            <button type="submit" class="btn">Submit</button>
         </form>
     </section>
     <section class="contact">
         <h2>Contact Us</h2>
-        <p>Phone: +91 12345 67890</p>
+        <p>Phone: [Your Phone Number]</p>
         <p>Address: 2nd Floor, Maruti Industrial Complex, Plot No - 29, Dynamic House, Sub. Major Laxmi Chand Rd, Sector 18, Gurugram, Haryana 122015, India</p>
     </section>
     <footer>
-        <p>&copy; 2023 Annapurna Finance Private Limited Gurugram</p>
+        <p>&copy; 2023 Annapurna Finance Private Limited Gurugram. All rights reserved.</p>
     </footer>
 </body>
 </html>
